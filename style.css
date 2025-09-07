@@ -1,0 +1,156 @@
+@import url("https://fonts.googleapis.com/css2?family=Epunda+Slab:ital,wght@0,300..900;1,300..900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Epunda Slab", serif;
+}
+
+section {
+  display: flex;
+  height: 100vh;
+  background-color: #0f172a;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+h1 {
+  color: #facc15;
+  max-width: 400px;
+}
+.form {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px;
+  background: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  max-width: 400px;
+  margin: 20px auto;
+}
+
+.task-title {
+  flex: 1;
+  padding: 12px 14px;
+  border: 1.5px solid #334155;
+  background: #1e293b;
+  color: #facc15;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.task-title::placeholder {
+  color: #facc15; /* warm yellow */
+  opacity: 0.8;
+}
+
+.task-title:focus {
+  border-color: #facc15;
+  box-shadow: 0 0 0 3px rgba(222, 235, 37, 0.4);
+}
+
+.add-button {
+  padding: 12px 20px;
+  background: #000000;
+  color: #facc15;
+  border: none;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.25s ease, transform 0.1s ease;
+}
+
+.add-button:hover {
+  background: #020c2d;
+}
+
+.add-button:active {
+  transform: scale(0.96);
+}
+.tasks {
+  display: flex;
+  flex-direction: column;
+  list-style: none;
+  max-width: 400px;
+  margin: 20px auto;
+
+  max-height: 300px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+
+  padding-right: 10px;
+  scrollbar-color: #475569 #1e293b;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 10px 0;
+  padding: 14px 16px;
+  background: #1e293b;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  color: #d1d1d1;
+
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.task.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.task.remove {
+  opacity: 0;
+  transform: translateY(10px);
+}
+
+.task input[type="checkbox"] {
+  transform: scale(1.2);
+  cursor: pointer;
+  accent-color: #facc15; 
+}
+
+.task-text {
+  flex: 1;
+  font-size: 15px;
+}
+
+.task-text.done {
+  text-decoration: line-through;
+  color: #94a3b8; 
+}
+
+.task button {
+  border: none;
+  background: none;
+  cursor: pointer;
+  padding: 6px 10px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 600;
+  transition: background 0.2s;
+}
+
+.task .edit {
+  color: #2c15fa; /* yellow edit */
+}
+
+.task .edit:hover {
+  background: #4c3ae94e;
+}
+
+.task .delete {
+  color: #ef4444; /* red delete */
+}
+
+.task .delete:hover {
+  background: rgba(239, 68, 68, 0.1);
+}
