@@ -18,5 +18,5 @@ JavaScript (DOM manipulation, localStorage)
 
 Perfect for practicing DOM manipulation, event delegation, and localStorage handling. 🚀
 
-[![Watch the video]](https://youtu.be/qedJYQFokAA)
+<video src="demo.mp4" controls width="600"></video>
 
